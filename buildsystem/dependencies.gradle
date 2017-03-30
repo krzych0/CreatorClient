@@ -66,7 +66,6 @@ ext {
             appCompat:      "com.android.support:appcompat-v7:${appCompatVersion}",
             appDesign:      "com.android.support:design:${appCompatVersion}",
             recyclerView:   "com.android.support:recyclerview-v7:${appCompatVersion}",
-            constraintLayout:   "com.android.support.constraint:constraint-layout:1.0.2",
             androidAnnotations: "com.android.support:support-annotations:${appCompatVersion}",
 
             slf4j:          "org.slf4j:slf4j-api:${slf4jVersion}",

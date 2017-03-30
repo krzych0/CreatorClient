@@ -58,7 +58,6 @@ dependencies {
 
     compile (
             appDependencies.appCompat,
-            appDependencies.constraintLayout,
             appDependencies.butterKnife,
             appDependencies.slf4j,
             appDependencies.logback,

@@ -9,3 +9,4 @@
 .externalNativeBuild
 CacheResponse.tmp
 /CacheResponse.tmp
+gradle.properties

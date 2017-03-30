@@ -1,1 +1,3 @@
-include ':app', ':account_authenticator', ':di', ':core'
+include ':app'
+include ':account_authenticator'
+include ':di', ':core'

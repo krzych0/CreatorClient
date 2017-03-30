@@ -1,0 +1,9 @@
+{
+  "Links": [
+    {
+      "rel": "bootstrap",
+      "href": "%s/configuration/bootstrap",
+      "type": "application/vnd.imgtec.bootstrap+json"
+    }
+  ]
+}

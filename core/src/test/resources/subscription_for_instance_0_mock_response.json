@@ -1,0 +1,80 @@
+{
+  "PageInfo": {
+    "TotalCount": 3,
+    "ItemsCount": 3,
+    "StartIndex": 0
+  },
+  "Items": [
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://fathomless-tundra-20151.herokuapp.com/api/v1/notifications/temperatureChanged",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://61dfbf7e.ngrok.io/api/v1/notifications/temperatureChanged",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://61dfbf7e.ngrok.io/testNotification",
+      "AcceptContentType": "application/json",
+      "Attributes": {
+        "Pmin": 5,
+        "Pmax": 15,
+        "Step": 1.5
+      },
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        }
+      ]
+    }
+  ],
+  "Links": [
+    {
+      "rel": "add",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/0ZFKyWNbKUaL6Mi9iW-aKA/instances/0/subscriptions"
+    }
+  ]
+}

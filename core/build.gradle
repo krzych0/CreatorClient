@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+apply from: '../config/quality.gradle'
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = JavaVersion.VERSION_1_8
+//noinspection GroovyUnusedAssignment
+targetCompatibility = JavaVersion.VERSION_1_8
+
+// http://andersmurphy.com/2015/09/16/setting-up-retrolambda/
+retrolambda {
+    jdk JAVA8_HOME
+    oldJdk JAVA7_HOME
+    javaVersion JavaVersion.VERSION_1_7
+}
+
+sourceSets {
+    test {
+        output.resourcesDir = output.classesDir
+    }
+}
+
+tasks.matching {it instanceof Test}.all {
+    testLogging.events = ["failed", "passed", "skipped"]
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    compile(
+            fileTree(dir: 'libs', include: ['*.jar']),
+            appDependencies.slf4j,
+            appDependencies.logback,
+            appDependencies.okHttp,
+            appDependencies.gson
+    )
+
+    testCompile (
+            testDependencies.junit,
+            testDependencies.mockito,
+            testDependencies.mockWebServer
+    )
+}

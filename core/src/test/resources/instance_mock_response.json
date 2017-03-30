@@ -1,0 +1,26 @@
+{
+  "Links": [
+    {
+      "rel": "self",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ/instances/0"
+    },
+    {
+      "rel": "update",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ/instances/0"
+    },
+    {
+      "rel": "remove",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ/instances/0"
+    },
+    {
+      "rel": "subscriptions",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ/instances/0/subscriptions"
+    },
+    {
+      "rel": "definition",
+      "href": "%s/objecttypes/definitions/rRophcJx3kW7DxbU5pVotQ"
+    }
+  ],
+  "InstanceID": "0",
+  "SetPointValue": 0
+}

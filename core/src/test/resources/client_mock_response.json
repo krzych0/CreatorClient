@@ -1,0 +1,28 @@
+{
+  "Name": "TemperatureDeviceClient",
+  "Links": [
+    {
+      "rel": "self",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w"
+    },
+    {
+      "rel": "remove",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w"
+    },
+    {
+      "rel": "objecttypes",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes",
+      "type": "application/vnd.imgtec.objecttypes+json"
+    },
+    {
+      "rel": "subscriptions",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/subscriptions",
+      "type": "application/vnd.imgtec.subscriptions+json"
+    },
+    {
+      "rel": "metrics",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/metrics",
+      "type": "application/vnd.imgtec.metrics+json"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "PageInfo": {
+    "TotalCount": 4,
+    "ItemsCount": 4,
+    "StartIndex": 0
+  },
+  "Items": [
+    {
+      "Name": "MasterControllerClient",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/clients/3k_GI0NsSEmcHwh3mIJMLg"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/clients/3k_GI0NsSEmcHwh3mIJMLg"
+        },
+        {
+          "rel": "objecttypes",
+          "href": "%s/clients/3k_GI0NsSEmcHwh3mIJMLg/objecttypes",
+          "type": "application/vnd.imgtec.objecttypes+json"
+        },
+        {
+          "rel": "subscriptions",
+          "href": "%s/clients/3k_GI0NsSEmcHwh3mIJMLg/subscriptions",
+          "type": "application/vnd.imgtec.subscriptions+json"
+        },
+        {
+          "rel": "metrics",
+          "href": "%s/clients/3k_GI0NsSEmcHwh3mIJMLg/metrics",
+          "type": "application/vnd.imgtec.metrics+json"
+        }
+      ]
+    },
+    {
+      "Name": "RelayDeviceClient",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/clients/zcyHN413FkebLVsm9XXISw"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/clients/zcyHN413FkebLVsm9XXISw"
+        },
+        {
+          "rel": "objecttypes",
+          "href": "%s/clients/zcyHN413FkebLVsm9XXISw/objecttypes",
+          "type": "application/vnd.imgtec.objecttypes+json"
+        },
+        {
+          "rel": "subscriptions",
+          "href": "%s/clients/zcyHN413FkebLVsm9XXISw/subscriptions",
+          "type": "application/vnd.imgtec.subscriptions+json"
+        },
+        {
+          "rel": "metrics",
+          "href": "%s/clients/zcyHN413FkebLVsm9XXISw/metrics",
+          "type": "application/vnd.imgtec.metrics+json"
+        }
+      ]
+    },
+    {
+      "Name": "MotionDeviceClient",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/clients/9kdMbzzZA0mDipdAgpcSRg"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/clients/9kdMbzzZA0mDipdAgpcSRg"
+        },
+        {
+          "rel": "objecttypes",
+          "href": "%s/clients/9kdMbzzZA0mDipdAgpcSRg/objecttypes",
+          "type": "application/vnd.imgtec.objecttypes+json"
+        },
+        {
+          "rel": "subscriptions",
+          "href": "%s/clients/9kdMbzzZA0mDipdAgpcSRg/subscriptions",
+          "type": "application/vnd.imgtec.subscriptions+json"
+        },
+        {
+          "rel": "metrics",
+          "href": "%s/clients/9kdMbzzZA0mDipdAgpcSRg/metrics",
+          "type": "application/vnd.imgtec.metrics+json"
+        }
+      ]
+    },
+    {
+      "Name": "TemperatureDeviceClient",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w"
+        },
+        {
+          "rel": "objecttypes",
+          "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes",
+          "type": "application/vnd.imgtec.objecttypes+json"
+        },
+        {
+          "rel": "subscriptions",
+          "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/subscriptions",
+          "type": "application/vnd.imgtec.subscriptions+json"
+        },
+        {
+          "rel": "metrics",
+          "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/metrics",
+          "type": "application/vnd.imgtec.metrics+json"
+        }
+      ]
+    }
+  ]
+}

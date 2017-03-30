@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("authenticatorCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("authenticatorBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("authenticatorMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("authenticatorTargetSdkVersion")
+
+        versionCode globalConfiguration.getAt("authenticatorVersionCode")
+        versionName globalConfiguration.getAt("authenticatorVersionName")
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    lintOptions {
+        warning 'InvalidPackage'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    def appDependencies = rootProject.ext.appDependencies
+
+    compile (
+            appDependencies.appCompat,
+            appDependencies.constraintLayout,
+            appDependencies.butterKnife,
+            appDependencies.slf4j,
+            appDependencies.logback,
+            appDependencies.okHttp,
+            appDependencies.okHttpLoggingInterceptor,
+            appDependencies.gson,
+
+            project(':di'),
+            project(':core')
+    )
+
+    apt (appDependencies.butterKnifeCompiler)
+
+    testCompile (
+            testDependencies.junit,
+            testDependencies.mockWebServer,
+            testDependencies.assertj,
+            testDependencies.mockito,
+    )
+
+}

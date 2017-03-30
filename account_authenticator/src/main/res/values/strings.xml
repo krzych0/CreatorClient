@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Authenticator</string>
+    <string name="account_label">Creator</string>
+    <string name="title_fmt">Category</string>
+    <string name="key1_action">Pref screen action</string>
+    <string name="key1_summary">Pref screen summary</string>
+</resources>

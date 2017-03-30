@@ -1,0 +1,100 @@
+
+
+ext {
+
+    //Android:
+    appCompileSdkVersion = 25
+    appBuildToolsVersion = '25.0.2'
+
+    appApplicationId = 'com.imgtec.creatorclient'
+    appTestApplicationId = 'com.imgtec.creatorclient'
+    appMinSdkVersion = 19
+    appTargetSdkVersion = 25
+    appVersionCode = 1
+    appVersionName = "0.1.0"
+
+    //----------------------------------------------------------------------
+    authenticatorCompileSdkVersion = 25
+    authenticatorBuildToolsVersion = '25.0.2'
+
+    authenticatorMinSdkVersion = 19
+    authenticatorTargetSdkVersion = 25
+    authenticatorVersionCode = 1
+    authenticatorVersionName = "0.1.0"
+
+    //----------------------------------------------------------------------
+    diCompileSdkVersion = 25
+    diBuildToolsVersion = '25.0.2'
+
+    diMinSdkVersion = 19
+    diTargetSdkVersion = 25
+    diVersionCode = 1
+    diVersionName = "1.0.0"
+    //----------------------------------------------------------------------
+
+    //libraries
+    appCompatVersion = '25.3.0'
+
+    butterKnifeVersion = '8.5.1'
+
+    slf4jVersion = '1.7.4'
+    logbackVersion = '1.1.1-6'
+
+    daggerVersion = '2.0.2'
+    jsr250Version = '1.0'
+
+    javaxInjectVersion = '1'
+
+    okHttpVersion = '3.6.0'
+    gsonVersion = '2.8.0'
+
+    leakCanaryVersion = '1.5'
+    stethoVersion = '1.4.2'
+
+    //Testing
+    jUnitVersion = '4.12'
+    assertJVersion = '3.6.2'
+    mockitoVersion = '2.+'
+    espressoContribVersion = '2.2.2'
+    testingSupportLibVersion = '0.1'
+    mockWebServerVersion = '3.6.0'
+
+    
+    //dependencies:
+    //app module
+    appDependencies = [
+            appCompat:      "com.android.support:appcompat-v7:${appCompatVersion}",
+            appDesign:      "com.android.support:design:${appCompatVersion}",
+            recyclerView:   "com.android.support:recyclerview-v7:${appCompatVersion}",
+            constraintLayout:   "com.android.support.constraint:constraint-layout:1.0.2",
+            androidAnnotations: "com.android.support:support-annotations:${appCompatVersion}",
+
+            slf4j:          "org.slf4j:slf4j-api:${slf4jVersion}",
+            logback:        "com.github.tony19:logback-android-classic:${logbackVersion}",
+
+            butterKnife:    "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterKnifeCompiler: "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+
+            dagger:         "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler: "com.google.dagger:dagger-compiler:${daggerVersion}",
+            jsr250:         "javax.annotation:jsr250-api:${jsr250Version}",
+            javaxInject:    "javax.inject:javax.inject:${javaxInjectVersion}",
+
+            okHttp:         "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            gson:           "com.google.code.gson:gson:${gsonVersion}",
+
+            leakCanary:     "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            stetho:         "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
+    ]
+
+    testDependencies = [
+            junit:                  "junit:junit:${jUnitVersion}",
+            assertj:                "org.assertj:assertj-core:${assertJVersion}",
+            mockito:                "org.mockito:mockito-core:${mockitoVersion}",
+            mockWebServer:          "com.squareup.okhttp3:mockwebserver:${mockWebServerVersion}",
+            espressoContrib:        "com.android.support.test.espresso:espresso-contrib:${espressoContribVersion}",
+            testingSupportLib:      "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+            leakCanaryNoOp:         "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+    ]
+}

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("diCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("diBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("diMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("diTargetSdkVersion")
+
+        versionCode globalConfiguration.getAt("diVersionCode")
+        versionName globalConfiguration.getAt("diVersionName")
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    def appDependencies = rootProject.ext.appDependencies
+    compile appDependencies.appCompat
+    compile appDependencies.javaxInject
+
+
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,30 @@
+{
+  "Items": [
+    {
+      "Links": [
+        {
+          "rel": "subscription",
+          "href": "/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        },
+        {
+          "rel": "client",
+          "href": "/clients/wKYPSi_0YEqFPpVohVyu6w"
+        },
+        {
+          "rel": "object",
+          "href": "/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/c94a91d1-5b63-4629-8be8-c8bd896f9a28/instances/0"
+        },
+        {
+          "rel": "definition",
+          "href": "/objecttypes/definitions/c94a91d1-5b63-4629-8be8-c8bd896f9a28"
+        }
+      ],
+      "TimeTriggered": "2017-03-27T12:07:18Z",
+      "SubscriptionType": "Observation",
+      "Value": {
+        "InstanceID": "0",
+        "SensorValue": 22
+      }
+    }
+  ]
+}

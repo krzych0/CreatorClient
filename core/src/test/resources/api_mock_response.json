@@ -1,0 +1,49 @@
+{
+  "Links": [
+    {
+      "rel": "authenticate",
+      "href": "%s/oauth/token",
+      "type": "application/vnd.imgtec.oauthtoken+json"
+    },
+    {
+      "rel": "accesskeys",
+      "href": "%s/accesskeys",
+      "type": "application/vnd.imgtec.accesskeys+json"
+    },
+    {
+      "rel": "configuration",
+      "href": "%s/configuration",
+      "type": "application/vnd.imgtec.configuration+json"
+    },
+    {
+      "rel": "clients",
+      "href": "%s/clients",
+      "type": "application/vnd.imgtec.clients+json"
+    },
+    {
+      "rel": "identities",
+      "href": "%s/identities",
+      "type": "application/vnd.imgtec.identities+json"
+    },
+    {
+      "rel": "objectdefinitions",
+      "href": "%s/objecttypes/definitions",
+      "type": "application/vnd.imgtec.objectdefinitions+json"
+    },
+    {
+      "rel": "subscriptions",
+      "href": "%s/subscriptions",
+      "type": "application/vnd.imgtec.subscriptions+json"
+    },
+    {
+      "rel": "metrics",
+      "href": "%s/metrics",
+      "type": "application/vnd.imgtec.metrics+json"
+    },
+    {
+      "rel": "versions",
+      "href": "%s/versions",
+      "type": "application/vnd.imgtec.versions+json"
+    }
+  ]
+}

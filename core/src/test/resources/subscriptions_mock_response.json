@@ -1,0 +1,194 @@
+{
+  "PageInfo": {
+    "TotalCount": 9,
+    "ItemsCount": 9,
+    "StartIndex": 0
+  },
+  "Items": [
+    {
+      "SubscriptionType": "ClientUpdated",
+      "Url": "https://fathomless-tundra-20151.herokuapp.com/api/v1/notifications/clientUpdated",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/pKKCa2WH6kuo-f8azaAj6g"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/pKKCa2WH6kuo-f8azaAj6g"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/pKKCa2WH6kuo-f8azaAj6g"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "ClientConnected",
+      "Url": "https://fathomless-tundra-20151.herokuapp.com/api/v1/notifications/clientConnected",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/pQzUt6rxd0ej2G05a8bQJQ"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/pQzUt6rxd0ej2G05a8bQJQ"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/pQzUt6rxd0ej2G05a8bQJQ"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "ClientConnected",
+      "Url": "https://61dfbf7e.ngrok.io/notifications/onClientConnected",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/FnJ3HR9FgE2zjeWAby-zAg"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/FnJ3HR9FgE2zjeWAby-zAg"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/FnJ3HR9FgE2zjeWAby-zAg"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://fathomless-tundra-20151.herokuapp.com/api/v1/notifications/temperatureChanged",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/s44OLSjm4ESvfXv-I914hA"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "ClientConnected",
+      "Url": "https://61dfbf7e.ngrok.io/api/v1/notifications/clientConnected",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/wzEpVI3yLUu6ZsirfAX0uw"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/wzEpVI3yLUu6ZsirfAX0uw"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/wzEpVI3yLUu6ZsirfAX0uw"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "ClientUpdated",
+      "Url": "https://61dfbf7e.ngrok.io/api/v1/notifications/clientUpdated",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/PLqjI0KXNk-NWkx13kJC_g"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/PLqjI0KXNk-NWkx13kJC_g"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/PLqjI0KXNk-NWkx13kJC_g"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://61dfbf7e.ngrok.io/api/v1/notifications/temperatureChanged",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/HjZJOMCyXUSxcdhb0l9qPQ"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "Observation",
+      "Property": "SensorValue",
+      "Url": "https://61dfbf7e.ngrok.io/testNotification",
+      "AcceptContentType": "application/json",
+      "Attributes": {
+        "Pmin": 5,
+        "Pmax": 15,
+        "Step": 1.5
+      },
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/bQn_Q4P5lEusTYX4R3rO6Q"
+        }
+      ]
+    },
+    {
+      "SubscriptionType": "ClientConnected",
+      "Url": "https://61dfbf7e.ngrok.io/testNotificationClientConnectedUpdated",
+      "AcceptContentType": "application/json",
+      "Links": [
+        {
+          "rel": "self",
+          "href": "%s/subscriptions/L5tibrwDqEqcl6IcDjK74A"
+        },
+        {
+          "rel": "update",
+          "href": "%s/subscriptions/L5tibrwDqEqcl6IcDjK74A"
+        },
+        {
+          "rel": "remove",
+          "href": "%s/subscriptions/L5tibrwDqEqcl6IcDjK74A"
+        }
+      ]
+    }
+  ],
+  "Links": [
+    {
+      "rel": "add",
+      "href": "%s/subscriptions"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "ObjectTypeID": "3308",
+  "Links": [
+    {
+      "rel": "self",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ"
+    },
+    {
+      "rel": "definition",
+      "href": "%s/objecttypes/definitions/rRophcJx3kW7DxbU5pVotQ",
+      "type": "application/vnd.imgtec.objectdefinition+json"
+    },
+    {
+      "rel": "instances",
+      "href": "%s/clients/wKYPSi_0YEqFPpVohVyu6w/objecttypes/rRophcJx3kW7DxbU5pVotQ/instances",
+      "type": "application/vnd.oma.lwm2m.ext:3308+json"
+    }
+  ]
+}

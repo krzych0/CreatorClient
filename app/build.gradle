@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("appCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("appBuildToolsVersion")
+
+    defaultConfig {
+        applicationId globalConfiguration.getAt("appApplicationId")
+        minSdkVersion globalConfiguration.getAt("appMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("appTargetSdkVersion")
+
+        versionCode globalConfiguration.getAt("appVersionCode")
+        versionName globalConfiguration.getAt("appVersionName")
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        warning 'InvalidPackage'
+    }
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.appDependencies
+
+    compile (
+            fileTree(include: ['*.jar'], dir: 'libs'),
+            appDependencies.appCompat,
+            appDependencies.appDesign,
+            appDependencies.recyclerView,
+
+            appDependencies.slf4j,
+            appDependencies.logback,
+
+            appDependencies.butterKnife,
+
+            appDependencies.dagger,
+
+            appDependencies.stetho,
+
+            project(':account_authenticator')
+    )
+
+    testCompile (
+            testDependencies.junit,
+            testDependencies.assertj,
+            testDependencies.mockito,
+            testDependencies.mockWebServer,
+            testDependencies.leakCanaryNoOp,
+    )
+
+    androidTestCompile(testDependencies.espressoContrib) {
+        exclude module: "support-annotations"
+        exclude module: "support-v4"
+        exclude module: "design"
+        exclude module: "recyclerview-v7"
+    }
+
+    apt (
+            appDependencies.butterKnifeCompiler,
+            appDependencies.daggerCompiler
+    )
+
+    provided appDependencies.jsr250
+}

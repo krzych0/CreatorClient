@@ -6,7 +6,7 @@ apply from: '../config/quality.gradle'
 def versionMajor = 0
 def versionMinor = 1
 def versionPatch = 0
-def versionBuild = 2
+def versionBuild = 3
 
 group 'com.imgtec.creator'
 version '1.0-SNAPSHOT'

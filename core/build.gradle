@@ -3,6 +3,20 @@ apply plugin: 'me.tatarka.retrolambda'
 apply from: '../config/quality.gradle'
 
 
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+def versionBuild = 1
+
+group 'com.imgtec.creator'
+version '1.0-SNAPSHOT'
+
+
+jar {
+    baseName = 'creator-client-core'
+    version =  "${versionMajor}.${versionMinor}.${versionPatch}-${versionBuild}"
+}
+
 //noinspection GroovyUnusedAssignment
 sourceCompatibility = JavaVersion.VERSION_1_8
 //noinspection GroovyUnusedAssignment

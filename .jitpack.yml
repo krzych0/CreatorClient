@@ -10,6 +10,9 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
 
+env:
+  ORG_GRADLE_PROJECT_JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+  ORG_GRADLE_PROJECT_JAVA7_HOME=/usr/lib/jvm/java-7-oracle
 before_install:
     - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
     - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle

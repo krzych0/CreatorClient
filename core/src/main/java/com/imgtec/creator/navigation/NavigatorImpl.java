@@ -112,7 +112,7 @@ public class NavigatorImpl implements Navigator {
   public Navigatable findByRel(String rel) throws IOException, NavigationException {
 
 
-    JsonObject root = (getNode() == null) ? client.get(rootUrl) : getNode();
+    JsonObject root = (getNode() == null) ? (JsonObject) client.get(rootUrl) : getNode();
     if (root == null) {
       throw new NavigationException("Who would expect that ;)");
     }

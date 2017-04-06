@@ -132,8 +132,12 @@ public class NavigatorImplTest extends BaseTest {
       final String DEVICE_NAME = "TemperatureDeviceClient";
       navigator = client.createNavigator(url.toString());
       Client myClient = navigator.findByRel("clients")
-          .filter((propertyName, propertyValue) ->
-              propertyName.equals("Name") && propertyValue.equals(DEVICE_NAME))
+          .filter(new PropertyFilter() {
+            @Override
+            public boolean accept(String propertyName, String propertyValue) {
+              return propertyName.equals("Name") && propertyValue.equals(DEVICE_NAME);
+            }
+          })
           .get(Client.class, new GsonDeserializer());
       assertNotNull(myClient);
       assertEquals(5, myClient.getLinks().size());
@@ -159,8 +163,12 @@ public class NavigatorImplTest extends BaseTest {
       final String DEVICE_NAME = "TemperatureDeviceClient";
       navigator = client.createNavigator(url.toString());
       navigator.findByRel("clients")
-          .filter((propertyName, propertyValue) ->
-              propertyName.equals("NotExistingProperty") && propertyValue.equals(DEVICE_NAME))
+          .filter(new PropertyFilter() {
+            @Override
+            public boolean accept(String propertyName, String propertyValue) {
+              return propertyName.equals("NotExistingProperty") && propertyValue.equals(DEVICE_NAME);
+            }
+          })
           .get(Client.class, new GsonDeserializer());
 
       fail();
@@ -248,14 +256,26 @@ public class NavigatorImplTest extends BaseTest {
     try {
       PointValue value = navigator
           .findByRel("clients")
-          .filter((propertyName, propertyValue) ->
-              propertyName.equals("Name") && propertyValue.equals("TemperatureDeviceClient"))
+          .filter(new PropertyFilter() {
+            @Override
+            public boolean accept(String propertyName, String propertyValue) {
+              return propertyName.equals("Name") && propertyValue.equals("TemperatureDeviceClient");
+            }
+          })
           .findByRel("objecttypes")
-          .filter((propertyName, propertyValue) ->
-              propertyName.equals("ObjectTypeID") && propertyValue.equals("3308"))
+          .filter(new PropertyFilter() {
+            @Override
+            public boolean accept(String propertyName, String propertyValue) {
+              return propertyName.equals("ObjectTypeID") && propertyValue.equals("3308");
+            }
+          })
           .findByRel("instances")
-          .filter((propertyName, propertyValue) ->
-              propertyName.equals("InstanceID") && propertyValue.equals("0"))
+          .filter(new PropertyFilter() {
+            @Override
+            public boolean accept(String propertyName, String propertyValue) {
+              return propertyName.equals("InstanceID") && propertyValue.equals("0");
+            }
+          })
           .get(new TypeToken<PointValue>() {
           }, new GsonDeserializer());
 

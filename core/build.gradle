@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'me.tatarka.retrolambda'
 apply from: '../config/quality.gradle'
 
 
@@ -17,17 +16,8 @@ jar {
     version =  "${versionMajor}.${versionMinor}.${versionPatch}-${versionBuild}"
 }
 
-//noinspection GroovyUnusedAssignment
-sourceCompatibility = JavaVersion.VERSION_1_8
-//noinspection GroovyUnusedAssignment
-targetCompatibility = JavaVersion.VERSION_1_8
-
-// http://andersmurphy.com/2015/09/16/setting-up-retrolambda/
-retrolambda {
-    jdk project.JAVA8_HOME
-    oldJdk project.JAVA7_HOME
-    javaVersion JavaVersion.VERSION_1_7
-}
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
 
 sourceSets {
     test {

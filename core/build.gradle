@@ -1,13 +1,14 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 apply from: '../config/quality.gradle'
 
 
 def versionMajor = 0
 def versionMinor = 1
 def versionPatch = 0
-def versionBuild = 3
+def versionBuild = 1
 
-group 'com.imgtec.creator'
+group = 'com.github.krzych0'
 version '1.0-SNAPSHOT'
 
 

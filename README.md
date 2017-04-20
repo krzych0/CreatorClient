@@ -65,7 +65,7 @@ which means that you need to follow links in order to reach to certain resources
 !!! IMPORTANT !!!
 
 As a user you need to ba aware that `CreatorClient` library internally is using [OkHttp](http://square.github.io/okhttp/) for networking
-and [GSON](https://github.com/google/gson) for marshaling/de-marshaling. It may conflict with different libraries, responsible got converting 
+and [GSON](https://github.com/google/gson) for marshaling/de-marshaling. It may conflict with different libraries, responsible for converting 
 Java Objects to JSON representation, that you may be using.   
 
 ## Accessing resources

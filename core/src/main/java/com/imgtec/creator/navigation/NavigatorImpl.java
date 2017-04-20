@@ -39,6 +39,11 @@ public class NavigatorImpl implements Navigator {
   }
 
   @Override
+  public void reset() {
+    node = null;
+  }
+
+  @Override
   public Navigatable filter(PropertyFilter filter)
       throws IOException, NavigationException {
 

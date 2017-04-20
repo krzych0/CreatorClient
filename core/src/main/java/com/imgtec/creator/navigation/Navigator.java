@@ -9,4 +9,5 @@ public interface Navigator extends Navigatable {
 
   JsonObject getNode();
 
+  void reset();
 }

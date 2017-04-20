@@ -4,6 +4,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.imgtec.creator.pojo.Hateoas;
 
+import java.lang.reflect.Type;
+
 /**
  * GSON specific implementation of {@link Deserializer}.
  */
@@ -23,5 +25,13 @@ public class GsonDeserializer implements Deserializer {
         .excludeFieldsWithoutExposeAnnotation()
         .create()
         .fromJson(json, typeToken.getType());
+  }
+
+  @Override
+  public <T extends Hateoas> T fromJson(String json, Type typeOfT) {
+    return new GsonBuilder()
+          .excludeFieldsWithoutExposeAnnotation()
+          .create()
+          .fromJson(json, typeOfT);
   }
 }

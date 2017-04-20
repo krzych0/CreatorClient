@@ -16,6 +16,8 @@ import android.view.View;
 import com.google.gson.reflect.TypeToken;
 import com.imgtec.creator.CreatorClient;
 import com.imgtec.creator.auth.AuthTokenProvider;
+import com.imgtec.creator.navigation.Navigator;
+import com.imgtec.creator.navigation.PropertyFilter;
 import com.imgtec.creator.pojo.AccessKey;
 import com.imgtec.creator.pojo.Api;
 import com.imgtec.creator.pojo.Bootstrap;
@@ -133,11 +135,42 @@ public class MainActivity extends AppCompatActivity
                   ObjectDefinitions.class);
               definitions.getItems();
 
+              testNavigator(client);
             } catch (Exception e) {
               e.printStackTrace();
             }
           }
         }).start();
+
+      }
+
+      private void testNavigator(CreatorClient client) {
+        try {
+          Navigator navigator = client.createNavigator(client.getUrl().toString());
+
+            ObjectType objectType = navigator
+                    .findByRel("clients")
+                    .filter((propertyName, propertyValue) -> propertyName.equals("Name") && propertyValue.equals("TemperatureDeviceClient"))
+                    .findByRel("objecttypes")
+                    .filter((propertyName, propertyValue) -> propertyName.equals("ObjectTypeID") && propertyValue.equals("3308"))
+                    .get(ObjectType.class, new GsonDeserializer());
+
+
+          navigator.reset();
+          PointValue value = navigator
+                  .findByRel("clients")
+                  .filter((propertyName, propertyValue) -> propertyName.equals("Name") && propertyValue.equals("TemperatureDeviceClient"))
+                  .findByRel("objecttypes")
+                  .filter((propertyName, propertyValue) -> propertyName.equals("ObjectTypeID") && propertyValue.equals("3308"))
+                  .findByRel("instances")
+                  .filter((propertyName, propertyValue) -> propertyName.equals("InstanceID") && propertyValue.equals("0"))
+                  .get(new TypeToken<PointValue>() {
+                  }, new GsonDeserializer());
+          value.getPointValue();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+
 
       }
     });

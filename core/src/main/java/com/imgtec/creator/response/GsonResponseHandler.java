@@ -46,10 +46,6 @@ public class GsonResponseHandler extends ResponseHandler {
       }
 
       return deserializer.fromJson(response.body().string(), returnType);
-//      return new GsonBuilder()
-//          .excludeFieldsWithoutExposeAnnotation()
-//          .create()
-//          .fromJson(response.body().string(), returnType);
     }
 
     throw new RuntimeException("Request failed with code:" + response.code());
@@ -59,11 +55,7 @@ public class GsonResponseHandler extends ResponseHandler {
   public <T extends Hateoas> T handle(Request request, Response response, TypeToken<T> typeToken)
       throws IOException {
     if (response.isSuccessful()) {
-      return deserializer.fromJson(response.body().string(), (TypeToken<T>) typeToken.getType());
-//      return new GsonBuilder()
-//          .excludeFieldsWithoutExposeAnnotation()
-//          .create()
-//          .fromJson(response.body().string(), typeToken.getType());
+      return deserializer.fromJson(response.body().string(), typeToken.getType());
     }
     throw new RuntimeException("Request failed with code:" + response.code());
   }
